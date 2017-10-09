@@ -177,17 +177,32 @@
             <!-- Post -->
             <div class="card-body">
             
-              <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">
+              <form accept-charset="UTF-8" action="/project/create" class="new_user" id="new_user" method="GET">
+                
+                <select class="combobox form-group mb-2" style="width:100px; max-width:150px; min-width:100px;">
+                  <option value="PA">Project</option>
+                  <option value="CT">쭈발1?</option>
+                  <option value="NY">쭈발2?</option>
+                  <option value="MD">쭈발3?</option>
+                  <option value="VA">쭈발4?</option>
+                </select>
+                
+                <script type="text/javascript">
+                  $(document).ready(function(){
+                    $('.combobox').combobox();
+                  });
+                </script>
+                
                 <div class="form-group">
-                  <input class="form-control" id="user_email" name="user[email]" type="email">
+                  <input class="form-control" id="user_email" name="title" type="text">
                 </div>
                 
-                <textarea class="tinymce" rows="18" cols="100%"></textarea>
-                <%= tinymce %>
+                <textarea class="tinymce" name="content" rows="18" cols="100%"></textarea>
+                <%= tinymce %>  
                 
                 <div style="text-align:center;">
-                  <input class="btn btn-default mt-3 mx-1" name="commit" type="submit" value="Save">
-                  <input class="btn btn-default mt-3 mx-1" name="commit" type="button" value="Cancel" onclick="location.href='/'">
+                  <input class="btn btn-default mt-3 mx-1" type="submit" value="Save">
+                  <input class="btn btn-default mt-3 mx-1" type="button" value="Cancel" onclick="location.href='/'">
                 </div>
               </form>
             </div>

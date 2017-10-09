@@ -6,6 +6,8 @@ gem 'bootstrap_form'
 # Editor : tinymce
 gem 'tinymce-rails'
 
+# Combo box
+gem 'bootstrap-combobox', '~> 1.2', '>= 1.2.6'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
