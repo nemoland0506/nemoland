@@ -20,12 +20,20 @@
       
       .catego {
         color: black;
-        font-size: 25px;
+        font-size: 20px;
         padding-left: 30px;
       }
-      li {
-        margin-bottom: 10px;
+      .catego_sub {
+        color: black;
+        font-size: 13px;
+        padding-left: 50px;
+        
       }
+      li {
+        margin-bottom: 5px;
+      }
+      
+      
     </style>
     
     
@@ -69,8 +77,18 @@
         
 
         <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <div class="col-md-3">
 
+          <!-- Search Widget -->
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+         
 
           <!-- Categories Widget -->
           <div class="card my-4">
@@ -79,43 +97,46 @@
               
               <ul class="list-unstyled mb-0" >
                 <li>
-                  <a href="#" class="catego">About</a>
+                  <a href="/" class="catego">About</a>
+                  
                 </li>
                 <li>
-                  <a href="#" class="catego">Projects</a>
+                  <a href="/project/index" class="catego"><b>Projects</b></a>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸발1?</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸발2?</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸발3?</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸발4?</a>
+                  </li>
                 </li>
                 <li>
                   <a href="#" class="catego">Blogs</a>
-                </li>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸발1?</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸발2?</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸발3?</a>
+                  </li>
                 <li>
                   <a href="#" class="catego">etc</a>
+                  <li class="page-item">
+                    <a href="#" class="catego_sub">쮸쭈발1?</a>
+                  </li>
                 </li>
               </ul>
                     
             </div>
           </div>
-
-
-
-          <!-- My Profile -->
-          <div class="card my-4">
-            <h5 class="card-header">Who i am</h5>
-            <div class="card-body">
-              <!-- profile img & desc -->
-              <div class="input-group">
-                <p style="text-align:center; margin-left:auto; margin-right:auto">
-                  <img src="/assets/profile.jpg" width="248px" height="248px">
-                <br><br>
-                안녕하세용?<br>
-                <small>Not to say, But to show.</small>
-                </p>
-              </div>
-              
-            </div>
-          </div>
-
           
-
           <!-- Side Widget -->
           <div class="card my-4">
             <h5 class="card-header">Side Widget</h5>
@@ -123,53 +144,56 @@
               You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
             </div>
           </div>
-          
-          
-          <!-- Search Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Search</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-              </div>
-            </div>
-          </div>
 
         </div>
         
         <!-- Blog Entries Column -->
-        <div class="col-md-8">
+        <div class="col-md-9">
 
-          <h1 class="my-4">Page Heading
-            <small>Secondary Text</small>
+          <h1 class="my-4 mx-3">Projects
+            <small> - New Post</small>
           </h1>
+          
+          <!--
+          <div class="container mb-3">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary mx-1" type="button">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn-secondary mx-1" type="button">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn-secondary mx-1" type="button">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+              </button>
+            </span>
+          </div>
+          -->
+          
 
           <!-- Blog Post -->
           <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+            
+            <!-- Post -->
             <div class="card-body">
-              <h2 class="card-title">Post Title</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            
+              <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">
+                <div class="form-group">
+                  <input class="form-control" id="user_email" name="user[email]" type="email">
+                </div>
+                
+                <textarea class="tinymce" rows="18" cols="100%"></textarea>
+                <%= tinymce %>
+                
+                <div style="text-align:center;">
+                  <input class="btn btn-default mt-3 mx-1" name="commit" type="submit" value="Save">
+                  <input class="btn btn-default mt-3 mx-1" name="commit" type="button" value="Cancel" onclick="location.href='/'">
+                </div>
+              </form>
             </div>
-            <div class="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
-            </div>
+            
+            
           </div>
-
-          <!-- Pagination -->
-          <ul class="pagination justify-content-center mb-4">
-            <li class="page-item">
-              <a class="page-link" href="#">&larr; Older</a>
-            </li>
-            <li class="page-item disabled">
-              <a class="page-link" href="#">Newer &rarr;</a>
-            </li>
-          </ul>
 
         </div>
       </div>

@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+# Bootstrap
+gem 'bootstrap_form'
+
+# Editor : tinymce
+gem 'tinymce-rails'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
