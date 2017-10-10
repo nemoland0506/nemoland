@@ -4,4 +4,8 @@ class BlogsController < ApplicationController
 
   def show
   end
+  
+  def setting
+    
+  end
 end
