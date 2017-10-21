@@ -1,24 +1,23 @@
 Rails.application.routes.draw do
   
-  get 'project/index'
-
-  get 'project/create'
-
-  get 'project/create_new'
-
-  get 'project/destroy'
-
-  get 'project/show'
-
-  get 'project/update'
-
-  get 'project/update_view'
+  
 
   root 'blogs#index'
+  
   
   get 'blogs/index'
   get 'blogs/show'
   get 'blogs/setting'
+  get 'blogs/cate_create'
+  get 'blogs/subcate_create'
+  
+  get 'project/index'
+  get 'project/create'
+  get 'project/create_new'
+  get 'project/destroy'
+  get 'project/show'
+  get 'project/update'
+  get 'project/update_view'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

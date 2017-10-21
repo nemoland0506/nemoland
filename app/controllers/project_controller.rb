@@ -3,13 +3,13 @@ class ProjectController < ApplicationController
   end
 
   def create
-    @post = Projects.new
-    @post.title = params[:title]
-    @post.title = params[:content]
-    @post.title = params[:ctg]
-    @post.save
+    @project_post = Project.new
+    @project_post.title = params[:title]
+    @project_post.content = params[:content]
+    @project_post.ctg = params[:ctg]
+    @project_post.save
     
-    redirect to :back
+    redirect_to :back
     
   end
 

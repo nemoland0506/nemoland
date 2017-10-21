@@ -169,11 +169,12 @@
             <!-- Add Category -->
             <div class="card-body">
             
-              <form accept-charset="UTF-8" action="#" class="new_user" id="new_user" method="GET">
+              <form accept-charset="UTF-8" action="/blogs/cate_create" class="new_user" id="new_user" method="GET">
                 
                 <div class="form-group">
                   <input class="form-control" id="user_email" name="cate_name" type="text" style="width:45%; float:left;" placeholder="Main Category Name is ..">
-                  <input class="btn btn-default mx-1" type="submit" value="Add" style="float:left">
+                  <input class="btn btn-default mx-1" type="submit" value="+" style="float:left; font-weight:bold;">
+
                 </div>
                 
               </form>
@@ -183,7 +184,7 @@
             <div class="card-body row">
               <div class="col-md-6 my-2">
               
-                <form accept-charset="UTF-8" action="#" class="new_user card px-4 pt-4 pb-2" id="new_user" method="GET">
+                <form accept-charset="UTF-8" action="/blogs/subcate_create" class="new_user card px-4 pt-4 pb-2" id="new_user" method="GET">
                   
                   <h3>Project</h3>
                   <ul>
@@ -197,6 +198,7 @@
                   
                   
                   <div class="form-group">
+                    <input type="hidden" value="1" />
                     <input class="form-control mt-3" id="user_email" name="subcate_name" type="text" style="width:70%; float:left;" placeholder="Sub Category Name is ..">
                     <input class="btn btn-default mt-3 mx-1" type="submit" value="Add" style="float:left">
                   </div>
@@ -226,6 +228,34 @@
                   
                 </form>
               </div>
+              
+              
+              
+              <% @mainCate.each do |mc| %>
+              <div class="col-md-6 my-2">
+              
+                <form accept-charset="UTF-8" action="#" class="new_user card px-4 pt-4 pb-2" id="new_user" method="GET">
+                  
+                  
+                  
+                    <h3><%= mc.name %></h3>
+                    
+                  
+                  
+                  
+                  <div class="form-group">
+                    <input class="form-control mt-3" id="user_email" name="subcate_name" type="text" style="width:70%; float:left;" placeholder="Sub Category Name is ..">
+                    <input class="btn btn-default mt-3 mx-1" type="submit" value="Add" style="float:left">
+                  </div>
+                  
+                </form>
+              </div>
+              <% end %>
+              
+              
+              
+              
+              
             </div>
             
             <!-- Introduce -->
